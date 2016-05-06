@@ -40,6 +40,7 @@ INSTALLED_APPS = (
     'django.contrib.sessions',
     'django.contrib.messages',
     'django.contrib.staticfiles',
+    'django.contrib.sites',
 
     'rest_framework',
     'rest_framework.authtoken',
@@ -184,6 +185,11 @@ if ENV_TYPE == 'dev':
         'django.contrib.auth.hashers.MD5PasswordHasher',
         'django.contrib.auth.hashers.PBKDF2PasswordHasher'
     ]
+
+try:
+    from mail import *
+except ImportError:
+    pass
 
 try:
     from local import *

@@ -1,0 +1,190 @@
+<!-- bootstrap theme -->
+<link href="/static/libs/adminpanel/css/bootstrap-theme.css" rel="stylesheet">
+<!--external css-->
+<!-- font icon -->
+<link href="/static/libs/adminpanel/css/elegant-icons-style.css" rel="stylesheet"/>
+<link href="/static/libs/adminpanel/css/font-awesome.min.css" rel="stylesheet"/>
+<!-- full calendar css-->
+<link href="/static/libs/adminpanel/assets/fullcalendar/fullcalendar/bootstrap-fullcalendar.css" rel="stylesheet"/>
+<link href="/static/libs/adminpanel/assets/fullcalendar/fullcalendar/fullcalendar.css" rel="stylesheet"/>
+<!-- easy pie chart-->
+<link href="/static/libs/adminpanel/assets/jquery-easy-pie-chart/jquery.easy-pie-chart.css" rel="stylesheet"
+      type="text/css" media="screen"/>
+<!-- owl carousel -->
+<link rel="stylesheet" href="/static/libs/adminpanel/css/owl.carousel.css" type="text/css">
+<link href="/static/libs/adminpanel/css/jquery-jvectormap-1.2.2.css" rel="stylesheet">
+<!-- Custom styles -->
+<link rel="stylesheet" href="/static/libs/adminpanel/css/fullcalendar.css">
+<link href="/static/libs/adminpanel/css/widgets.css" rel="stylesheet">
+<link href="/static/libs/adminpanel/css/style.css" rel="stylesheet">
+<link href="/static/libs/adminpanel/css/style-responsive.css" rel="stylesheet"/>
+<link href="/static/libs/adminpanel/css/xcharts.min.css" rel=" stylesheet">
+<link href="/static/libs/adminpanel/css/jquery-ui-1.10.4.min.css" rel="stylesheet">
+<!-- HTML5 shim and Respond.js IE8 support of HTML5 -->
+<!--[if lt IE 9]>
+<script src="/static/libs/adminpanel/js/html5shiv.js"></script>
+<script src="/static/libs/adminpanel/js/respond.min.js"></script>
+<script src="/static/libs/adminpanel/js/lte-ie7.js"></script>
+<![endif]-->
+
+
+<!-- container section start -->
+<section id="container" class="">
+    <header class="header dark-bg">
+        <div class="toggle-nav">
+            <div class="icon-reorder tooltips" data-original-title="Toggle Navigation" data-placement="bottom"><i
+                    class="icon_menu"></i></div>
+        </div>
+
+        <!--logo start-->
+        <a href="index.html" class="logo">Base <span class="lite">Admin</span></a>
+        <!--logo end-->
+
+        <div class="nav search-row" id="top_menu">
+            <!--  search form start -->
+            <ul class="nav top-menu">
+                <li>
+                    <form class="navbar-form">
+                        <input class="form-control" placeholder="Search" type="text">
+                    </form>
+                </li>
+            </ul>
+            <!--  search form end -->
+        </div>
+
+        <ng-include src="right_top_menu_template_url"></ng-include>
+    </header>
+    <!--header end-->
+
+    <!--sidebar start-->
+    <aside>
+        <ng-include src="left_menu_template_url"></ng-include>
+    </aside>
+    <!--sidebar end-->
+
+    <!--main content start-->
+    <section id="main-content">
+
+        <section class="wrapper">
+
+            <div class="row">
+                <div class="col-lg-12">
+                    <h3 class="page-header"><i class="fa fa-user-md"></i> Profile</h3>
+                    <ol class="breadcrumb">
+                        <li><i class="fa fa-home"></i><a href="/admin">Home</a></li>
+                        <li><i class="fa fa-user-md"></i>Profile</li>
+                    </ol>
+                </div>
+            </div>
+            <div class="row" ng-if="complete == true">
+                <div class="alert alert-success fade in">{{ complete_message }}</div>
+            </div>
+
+            <ng-include src="content_template_url" class="fade-animation"></ng-include>
+        </section>
+    </section>
+    <!--main content end-->
+</section>
+<!-- container section start -->
+
+
+<!-- javascripts -->
+<script src="/static/libs/adminpanel/js/jquery.js"></script>
+<script src="/static/libs/adminpanel/js/jquery-ui-1.10.4.min.js"></script>
+<script src="/static/libs/adminpanel/js/jquery-1.8.3.min.js"></script>
+<script type="text/javascript" src="/static/libs/adminpanel/js/jquery-ui-1.9.2.custom.min.js"></script>
+<!-- nice scroll -->
+<script src="/static/libs/adminpanel/js/jquery.scrollTo.min.js"></script>
+<script src="/static/libs/adminpanel/js/jquery.nicescroll.js" type="text/javascript"></script>
+<!-- charts scripts -->
+<script src="/static/libs/adminpanel/assets/jquery-knob/js/jquery.knob.js"></script>
+<script src="/static/libs/adminpanel/js/jquery.sparkline.js" type="text/javascript"></script>
+<script src="/static/libs/adminpanel/assets/jquery-easy-pie-chart/jquery.easy-pie-chart.js"></script>
+<script src="/static/libs/adminpanel/js/owl.carousel.js"></script>
+<!-- jQuery full calendar -->
+<
+<script src="/static/libs/adminpanel/js/fullcalendar.min.js"></script> <!-- Full Google Calendar - Calendar -->
+<script src="/static/libs/adminpanel/assets/fullcalendar/fullcalendar/fullcalendar.js"></script>
+<!--script for this page only-->
+<script src="/static/libs/adminpanel/js/calendar-custom.js"></script>
+<script src="/static/libs/adminpanel/js/jquery.rateit.min.js"></script>
+<!-- custom select -->
+<script src="/static/libs/adminpanel/js/jquery.customSelect.min.js"></script>
+<script src="/static/libs/adminpanel/assets/chart-master/Chart.js"></script>
+
+<!--custome script for all page-->
+<script src="/static/libs/adminpanel/js/scripts.js"></script>
+<!-- custom script for this page-->
+<script src="/static/libs/adminpanel/js/sparkline-chart.js"></script>
+<script src="/static/libs/adminpanel/js/easy-pie-chart.js"></script>
+<script src="/static/libs/adminpanel/js/jquery-jvectormap-1.2.2.min.js"></script>
+<script src="/static/libs/adminpanel/js/jquery-jvectormap-world-mill-en.js"></script>
+<script src="/static/libs/adminpanel/js/xcharts.min.js"></script>
+<script src="/static/libs/adminpanel/js/jquery.autosize.min.js"></script>
+<script src="/static/libs/adminpanel/js/jquery.placeholder.min.js"></script>
+<script src="/static/libs/adminpanel/js/gdp-data.js"></script>
+<script src="/static/libs/adminpanel/js/morris.min.js"></script>
+<script src="/static/libs/adminpanel/js/sparklines.js"></script>
+<script src="/static/libs/adminpanel/js/charts.js"></script>
+<script src="/static/libs/adminpanel/js/jquery.slimscroll.min.js"></script>
+<script>
+
+      //knob
+      $(function() {
+        $(".knob").knob({
+          'draw' : function () {
+            $(this.i).val(this.cv + '%')
+          }
+        })
+      });
+
+      //carousel
+      $(document).ready(function() {
+          $("#owl-slider").owlCarousel({
+              navigation : true,
+              slideSpeed : 300,
+              paginationSpeed : 400,
+              singleItem : true
+
+          });
+      });
+
+      //custom select box
+
+      $(function(){
+          $('select.styled').customSelect();
+      });
+
+	  /* ---------- Map ---------- */
+	$(function(){
+	  $('#map').vectorMap({
+	    map: 'world_mill_en',
+	    series: {
+	      regions: [{
+	        values: gdpData,
+	        scale: ['#000', '#000'],
+	        normalizeFunction: 'polynomial'
+	      }]
+	    },
+		backgroundColor: '#eef3f7',
+	    onLabelShow: function(e, el, code){
+	      el.html(el.html()+' (GDP - '+gdpData[code]+')');
+	    }
+	  });
+	});
+
+
+
+
+</script>
+
+
+
+
+
+
+
+
+
+
+
