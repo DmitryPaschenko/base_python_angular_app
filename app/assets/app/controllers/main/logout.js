@@ -3,4 +3,5 @@
 angular.module('mainApp')
   .controller('LogoutCtrl', function ($scope, $location, djangoAuth) {
     djangoAuth.logout();
+    $location.path('/').replace();
   });

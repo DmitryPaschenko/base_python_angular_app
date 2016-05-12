@@ -25,6 +25,15 @@ angular.module('mainApp', [
                 controller: 'AdminCtrl',
                 resolve: {
                     authenticated: ['djangoAuth', function (djangoAuth) {
+                        return djangoAuth.authenticationStatus(true);
+                    }]
+                }
+            })
+            .when('/admin/login', {
+                templateUrl: '/static/app/templates/admin/login.html',
+                controller: 'LoginCtrl',
+                resolve: {
+                    authenticated: ['djangoAuth', function (djangoAuth) {
                         return djangoAuth.authenticationStatus();
                     }]
                 }
@@ -34,7 +43,7 @@ angular.module('mainApp', [
                 controller: 'UserProfileCtrl',
                 resolve: {
                     authenticated: ['djangoAuth', function (djangoAuth) {
-                        return djangoAuth.authenticationStatus();
+                        return djangoAuth.authenticationStatus(true);
                     }]
                 }
             })
@@ -112,15 +121,14 @@ angular.module('mainApp', [
                     }]
                 }
             })
-//            .when('/user/profile', {
-//                templateUrl: '/static/app/templates/user/index.html',
-//                controller: 'UserprofileCtrl',
-//                resolve: {
-//                    authenticated: ['djangoAuth', function (djangoAuth) {
-//                        return djangoAuth.authenticationStatus(true);
-//                    }]
-//                }
-//            })
+            .when('/error404', {
+                templateUrl: '/static/app/templates/main/404.html',
+                resolve: {
+                    authenticated: ['djangoAuth', function (djangoAuth) {
+                        return djangoAuth.authenticationStatus();
+                    }]
+                }
+            })
             .otherwise({
                 redirectTo: '/'
             });

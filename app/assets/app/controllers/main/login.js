@@ -2,6 +2,13 @@
 
 angular.module('mainApp')
     .controller('LoginCtrl', function ($scope, $rootScope, $location, djangoAuth, Validate) {
+        if (djangoAuth.authenticated) {
+            if (/^\/admin/i.test($location.$$path)) {
+                $location.path("/admin/user/profile");
+            } else {
+                $location.path("/");
+            }
+        }
         $scope.model = {'username': '', 'password': ''};
         //$scope.complete = false;
         $scope.login = function (formData) {
@@ -11,8 +18,10 @@ angular.module('mainApp')
                 djangoAuth.login($scope.model.username, $scope.model.password)
                     .then(function (data) {
                         // success case
-                        $scope.cancel();
-                        $location.path("/");
+                        if (!/^\/admin/i.test($location.$$path)) {
+                            $scope.cancel();
+                        }
+                        $location.path("/admin/user/profile");
                     }, function (data) {
                         // error case
                         $scope.errors = data;
